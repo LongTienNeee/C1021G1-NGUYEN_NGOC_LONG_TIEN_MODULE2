@@ -1,4 +1,4 @@
-package ss2_loop_in_java.bai_tap.thiet_ke_menu_cho_ung_dung;
+package ss2_loop_in_java.thuc_hanh.thiet_ke_menu_cho_ung_dung;
 
 import java.util.Scanner;
 
