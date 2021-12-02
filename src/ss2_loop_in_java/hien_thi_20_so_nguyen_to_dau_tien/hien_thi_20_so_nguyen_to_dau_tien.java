@@ -1,0 +1,2 @@
+package ss2_loop_in_java.hien_thi_20_so_nguyen_to_dau_tien;public class hien_thi_20_so_nguyen_to_dau_tien {
+}

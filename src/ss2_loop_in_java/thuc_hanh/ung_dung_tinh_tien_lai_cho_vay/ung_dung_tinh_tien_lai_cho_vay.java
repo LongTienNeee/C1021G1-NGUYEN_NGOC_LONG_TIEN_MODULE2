@@ -1,0 +1,2 @@
+package ss2_loop_in_java.thuc_hanh.ung_dung_tinh_tien_lai_cho_vay;public class ung_dung_tinh_tien_lai_cho_vay {
+}
