@@ -20,10 +20,15 @@ public class tinh_tong_cac_so_o_cot {
             }
         }
 
+        System.out.println("Enter colspan to calculator");
+        int cal = input.nextInt();
         int sum = 0;
             for(int k = 0 ; k < row ; k++){
-                   sum += matrix[k][1];
-
+                if(cal >=0 && cal < col) {
+                    sum += matrix[k][cal];
+                } else {
+                    System.out.println("This colspan does not exist");
+                }
         }
 
         System.out.println(Arrays.deepToString(matrix));
