@@ -4,28 +4,35 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class them_phan_tu_vao_mang {
+        static int number ;
+        static int index;
     public static void main(String[] args){
-        Scanner input = new Scanner(System.in);
-        String[] arrName = {"Long","Tiên","Khoa","Hải"};
-        String[] arrNameAdd = new String[arrName.length + 1];
         int i = 0;
+        Scanner input = new Scanner(System.in);
+        int[] arr = {1,2,3,4,5,6};
+        int[] arrAdd = new int[arr.length + 1];
 
         System.out.println("Enter index want to add a element");
-        int index = input.nextInt();
+        index = input.nextInt();
+        System.out.println("Enter name to add");
+        number = input.nextInt();
 
-        System.out.println("Enter the element");
-        String name = input.nextLine();
-
-      for(String element : arrName){
-          arrNameAdd[i] = element;
+      for(int element : arr){
+          arrAdd[i] = element;
           i++;
       }
-      System.out.println("Array before add : " + Arrays.toString(arrName));
 
-      for(int j = index ; j < arrNameAdd.length; j++){
-          arrNameAdd[j+1] = arrNameAdd[j];
-      }
-      arrNameAdd[index] = name;
-      System.out.println("Array after add : " + Arrays.toString(arrNameAdd));
+      System.out.println("Array before add : " + Arrays.toString(arr));
+
+        if(index >= -1 && index <= arrAdd.length){
+            for(int j = arrAdd.length-1; j > index ; j--){
+                arrAdd[j] = arrAdd[j - 1];
+            }
+        } else {
+            System.out.println("This index does not exist");
+        }
+        arrAdd[index] = number;
+
+      System.out.println("Array after add : " + Arrays.toString(arrAdd));
     }
 }
