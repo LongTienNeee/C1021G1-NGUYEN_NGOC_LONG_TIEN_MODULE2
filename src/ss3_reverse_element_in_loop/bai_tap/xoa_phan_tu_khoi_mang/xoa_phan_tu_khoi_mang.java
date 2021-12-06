@@ -22,6 +22,7 @@ public class xoa_phan_tu_khoi_mang {
             for(int j = index; j < arr.length - 1; j++) {
                 arr[j] = arr[j + 1];
             }
+            arr[arr.length-1] = 0;
         } else {
             System.out.println("This element is not here");
         }
