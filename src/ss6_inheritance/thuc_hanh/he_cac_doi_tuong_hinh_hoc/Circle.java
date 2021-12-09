@@ -1,14 +1,16 @@
 package ss6_inheritance.thuc_hanh.he_cac_doi_tuong_hinh_hoc;
 
 public class Circle extends Shape {
-    private double radius = 1.0;
+    public double radius = 1.0;
 
-    public Circle() {
+    public Circle(){};
+
+    public Circle(double radius, String color , boolean filled) {
+        super(color, filled);
+        this.radius = radius;
     }
 
-    ;
-
-    Circle(double radius) {
+    public Circle(double radius) {
         this.radius = radius;
     }
 
@@ -27,8 +29,16 @@ public class Circle extends Shape {
         return perimeter;
     }
 
+//    @Override
+//    public String toString() {
+//        return "A Circle with radius = " + this.radius + " .Whích is a subclass off Shape";
+//    }
+
     @Override
     public String toString() {
-        return "A Circle with radius = " + this.radius + " .Whích is a subclass off Shape";
+        return "Circle{" +
+                "radius=" + radius +
+                " . Whích is a subclass off " + super.toString() +
+                '}';
     }
 }

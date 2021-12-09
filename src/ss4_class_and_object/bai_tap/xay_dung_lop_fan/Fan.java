@@ -1,9 +1,9 @@
 package ss4_class_and_object.bai_tap.xay_dung_lop_fan;
 
 public class Fan {
-    public final byte slow = 1;
-    public final byte medium= 2;
-    public final byte fast = 3;
+    public  byte slow = 1;
+    public  byte medium= 2;
+    public  byte fast = 3;
     private int speed = slow;
     private boolean on = false;
     private double radius = 5.0f;

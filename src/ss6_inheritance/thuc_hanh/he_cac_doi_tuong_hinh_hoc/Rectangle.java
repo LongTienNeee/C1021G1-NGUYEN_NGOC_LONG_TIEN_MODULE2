@@ -41,7 +41,16 @@ public class Rectangle extends Shape {
     }
 
 
-    public String toString(){
-        return "A Rectangle with width = " + this.width + " and length = "+ this.height + " which is a subclass of ";
+//    public String toString(){
+//        return "A Rectangle with width = " + this.width + " and length = "+ this.height + " which is a subclass of Shape" + super.toString();
+//    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "width=" + width +
+                ", height=" + height +
+                " . Whích is a subclass off " + super.toString() +
+                '}';
     }
 }

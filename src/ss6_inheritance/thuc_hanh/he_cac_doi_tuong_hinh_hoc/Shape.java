@@ -1,12 +1,14 @@
 package ss6_inheritance.thuc_hanh.he_cac_doi_tuong_hinh_hoc;
 
-public class Shape {
+import ss7_abstract_class_and_interface.bai_tap.interface_resizeable_cho_các_lop_hinh_hoc.Resizeable;
+
+public class Shape implements Resizeable {
     private String color = "Green";
     private boolean filled = true;
 
     public Shape(){}
 
-    Shape(String color , boolean filled){
+    public Shape(String color , boolean filled){
         this.color = color;
         this.filled = filled;
     }
@@ -27,9 +29,17 @@ public class Shape {
         return this.filled;
     }
 
+    @Override
+    public String toString() {
+        return "Shape{" +
+                "color='" + color + '\'' +
+                ", filled=" + (isfilled() ? "filled" :" not filled") +
+                '}';
+    }
+
 
     @Override
-    public String toString(){
-        return "A Shape width color of " + this.color + " and " + (isfilled() ? "filled" :" not filled");
+    public void resize(double percent) {
+
     }
 }

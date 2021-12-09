@@ -6,9 +6,9 @@ public class StopWatch {
     private LocalTime startTime;
     private LocalTime endTime;
 
-    public startTime(){
-        this.startTime = LocalTime.now();
-    }
+//    public startTime(){
+//        this.startTime = LocalTime.now();
+//    }
 
     public LocalTime getStartTime(){
         return startTime;

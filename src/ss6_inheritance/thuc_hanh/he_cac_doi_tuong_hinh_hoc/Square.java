@@ -1,6 +1,8 @@
 package ss6_inheritance.thuc_hanh.he_cac_doi_tuong_hinh_hoc;
 
-public class Square extends Rectangle {
+import ss7_abstract_class_and_interface.bai_tap.interface_colorable_cho_cac_lop_hinh_hoc.Colorable;
+
+public class Square extends Rectangle implements Colorable {
     private double side = 1.0;
     public Square(){};
     public Square(double side){
@@ -22,8 +24,21 @@ public class Square extends Rectangle {
         setSide(height);
     }
 
+//    @Override
+//    public String toString() {
+//        return "A Square width size = " + this.side + ", which is a subclass of Rectangle" + super.toString() ;
+//    }
+
     @Override
     public String toString() {
-        return "A Square width size = " + this.side + ", which is a subclass of ";
+        return "Square{" +
+                "side=" + side +
+                " . Whích is a subclass off " + super.toString() +
+                '}';
+    }
+
+    @Override
+    public void howToColor() {
+        
     }
 }
