@@ -12,7 +12,7 @@ public class Run {
         Resizeable[] resizeables = new Resizeable[3];
         resizeables[0] = new Circle(1.4 , "Red" , true);
         resizeables[1] = new Square(4.5);
-        resizeables[2] = new Rectangle(3.5, 6.0, "Red",true);
+        resizeables[2] = new Rectangle(3.5, 6.0);
 
         System.out.println("Before change");
         for(Resizeable resizeable : resizeables){
@@ -20,11 +20,23 @@ public class Run {
         }
 
         System.out.println("-----------------------------");
+        System.out.println("Area before change");
+        for(Resizeable resizeable : resizeables){
+//            System.out.println(resizeable.);
+        }
+
+        System.out.println("-----------------------------");
         System.out.println("After change");
         for(Resizeable resizeable : resizeables){
-            // đoạn này chwua xong
             resizeable.resize(Math.random()*100);
             System.out.println(resizeable);
         }
+
+        System.out.println("-----------------------------");
+        System.out.println("Area after change");
+        for(Resizeable resizeable : resizeables){
+//            System.out.println(resizeable.);
+        }
+
     }
 }

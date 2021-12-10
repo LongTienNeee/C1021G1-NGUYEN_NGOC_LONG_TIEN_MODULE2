@@ -8,7 +8,7 @@ public class RunSquare {
         colorables[0] = new Square(5.0);
         colorables[1] = new Square(7.0, 7.0 , "Red", true);
 
-        
+
         }
     }
-}
+
