@@ -19,10 +19,9 @@ public class Run {
             System.out.println(resizeable);
         }
 
-        System.out.println("-----------------------------");
         System.out.println("Area before change");
         for(Resizeable resizeable : resizeables){
-//            System.out.println(resizeable.);
+            System.out.println();
         }
 
         System.out.println("-----------------------------");
@@ -31,12 +30,5 @@ public class Run {
             resizeable.resize(Math.random()*100);
             System.out.println(resizeable);
         }
-
-        System.out.println("-----------------------------");
-        System.out.println("Area after change");
-        for(Resizeable resizeable : resizeables){
-//            System.out.println(resizeable.);
-        }
-
     }
 }
