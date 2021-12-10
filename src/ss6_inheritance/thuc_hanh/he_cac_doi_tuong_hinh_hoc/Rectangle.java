@@ -4,7 +4,7 @@ import ss7_abstract_class_and_interface.bai_tap.interface_resizeable_cho_các_lo
 
 import java.lang.annotation.Repeatable;
 
-public class Rectangle extends Shape implements Resizeable {
+public class Rectangle extends Shape{
     private double width = 1.0;
     private double height = 1.0;
 
@@ -56,7 +56,7 @@ public class Rectangle extends Shape implements Resizeable {
 
     @Override
     public void resize(double percent) {
-        this.width = width + percent;
-        this.height = height + percent;
+        this.width = this.width + width*(percent/100);
+        this.height = this.height + height*(percent/100);
     }
 }

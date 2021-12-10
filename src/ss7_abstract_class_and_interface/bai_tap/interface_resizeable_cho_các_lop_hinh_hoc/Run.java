@@ -9,26 +9,20 @@ import ss6_inheritance.thuc_hanh.he_cac_doi_tuong_hinh_hoc.Rectangle;
 
 public class Run {
     public static void main(String[] args) {
-        Resizeable[] resizeables = new Resizeable[3];
-        resizeables[0] = new Circle(1.4 , "Red" , true);
-        resizeables[1] = new Square(4.5);
-        resizeables[2] = new Rectangle(3.5, 6.0);
+//        Resizeable[] resizeables = new Resizeable[3];
+        Shape[] shapes = new Shape[3];
+        shapes[0] = new Circle(1.4);
+        shapes[1] = new Square(4.5);
+        shapes[2] = new Rectangle(3.5, 6.0);
 
         System.out.println("Before change");
-        for(Resizeable resizeable : resizeables){
-            System.out.println(resizeable);
+        for (Shape shape : shapes) {
+            System.out.println(shape);
         }
 
-        System.out.println("Area before change");
-        for(Resizeable resizeable : resizeables){
-            System.out.println();
+        for (Shape shape : shapes){
+//            System.out.println(shape.);
         }
 
-        System.out.println("-----------------------------");
-        System.out.println("After change");
-        for(Resizeable resizeable : resizeables){
-            resizeable.resize(Math.random()*100);
-            System.out.println(resizeable);
-        }
     }
 }

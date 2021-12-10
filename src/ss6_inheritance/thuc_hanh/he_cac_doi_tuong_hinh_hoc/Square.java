@@ -3,7 +3,7 @@ package ss6_inheritance.thuc_hanh.he_cac_doi_tuong_hinh_hoc;
 import ss7_abstract_class_and_interface.bai_tap.interface_colorable_cho_cac_lop_hinh_hoc.Colorable;
 import ss7_abstract_class_and_interface.bai_tap.interface_resizeable_cho_các_lop_hinh_hoc.Resizeable;
 
-public class Square extends Rectangle implements Colorable , Resizeable {
+public class Square extends Rectangle implements Colorable {
     public double side = 1.0;
     public Square(){};
     public Square(double side){
@@ -40,8 +40,8 @@ public class Square extends Rectangle implements Colorable , Resizeable {
 
     @Override
     public void resize(double percent) {
-        this.side = side + percent ;
-        
+        this.side = this.side + this.side*(percent/100);
+
     }
 
     @Override

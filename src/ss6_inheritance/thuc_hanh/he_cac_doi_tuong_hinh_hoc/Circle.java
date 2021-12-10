@@ -2,10 +2,13 @@ package ss6_inheritance.thuc_hanh.he_cac_doi_tuong_hinh_hoc;
 
 import ss7_abstract_class_and_interface.bai_tap.interface_resizeable_cho_các_lop_hinh_hoc.Resizeable;
 
-public class Circle extends Shape implements Resizeable {
+import java.util.Date;
+
+public class Circle extends Shape {
     public double radius = 1.0;
 
     public Circle(){};
+
 
     public Circle(double radius, String color , boolean filled) {
         super(color, filled);
@@ -21,20 +24,11 @@ public class Circle extends Shape implements Resizeable {
     }
 
     public double getArea() {
-        double area;
-        area = Math.PI * Math.pow(this.radius, 2);
-        return area;
+        return  Math.PI * Math.pow(this.radius, 2);
     }
     public double getPerimeter(){
-        double perimeter;
-        perimeter = this.radius * 2 * Math.PI;
-        return perimeter;
+        return  this.radius * 2 * Math.PI;
     }
-
-//    @Override
-//    public String toString() {
-//        return "A Circle with radius = " + this.radius + " .Whích is a subclass off Shape";
-//    }
 
     @Override
     public String toString() {
@@ -46,6 +40,6 @@ public class Circle extends Shape implements Resizeable {
 
     @Override
     public void resize(double percent) {
-        this.radius = radius + percent;
+        this.radius = this.radius + this.radius*(percent/200);
     }
 }
