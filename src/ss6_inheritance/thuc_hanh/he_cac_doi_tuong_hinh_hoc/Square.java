@@ -1,9 +1,10 @@
 package ss6_inheritance.thuc_hanh.he_cac_doi_tuong_hinh_hoc;
 
 import ss7_abstract_class_and_interface.bai_tap.interface_colorable_cho_cac_lop_hinh_hoc.Colorable;
+import ss7_abstract_class_and_interface.bai_tap.interface_resizeable_cho_các_lop_hinh_hoc.Resizeable;
 
-public class Square extends Rectangle implements Colorable {
-    private double side = 1.0;
+public class Square extends Rectangle implements Colorable , Resizeable {
+    public double side = 1.0;
     public Square(){};
     public Square(double side){
         super(side, side);
@@ -35,6 +36,12 @@ public class Square extends Rectangle implements Colorable {
                 "side=" + side +
                 " . Whích is a subclass off " + super.toString() +
                 '}';
+    }
+
+    @Override
+    public void resize(double percent) {
+        this.side = side + percent ;
+        
     }
 
     @Override

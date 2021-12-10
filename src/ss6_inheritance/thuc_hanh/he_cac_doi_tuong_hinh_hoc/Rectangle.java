@@ -1,6 +1,10 @@
 package ss6_inheritance.thuc_hanh.he_cac_doi_tuong_hinh_hoc;
 
-public class Rectangle extends Shape {
+import ss7_abstract_class_and_interface.bai_tap.interface_resizeable_cho_các_lop_hinh_hoc.Resizeable;
+
+import java.lang.annotation.Repeatable;
+
+public class Rectangle extends Shape implements Resizeable {
     private double width = 1.0;
     private double height = 1.0;
 
@@ -41,10 +45,6 @@ public class Rectangle extends Shape {
     }
 
 
-//    public String toString(){
-//        return "A Rectangle with width = " + this.width + " and length = "+ this.height + " which is a subclass of Shape" + super.toString();
-//    }
-
     @Override
     public String toString() {
         return "Rectangle{" +
@@ -52,5 +52,11 @@ public class Rectangle extends Shape {
                 ", height=" + height +
                 " . Whích is a subclass off " + super.toString() +
                 '}';
+    }
+
+    @Override
+    public void resize(double percent) {
+        this.width = width + percent;
+        this.height = height + percent;
     }
 }
