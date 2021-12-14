@@ -1,4 +1,4 @@
-package bai_tap_ve_nha_huong_doi_tuong;
+package bai_tap_ve_nha_huong_doi_tuong.bai_1;
 
 import ss8_clean_code_va_refactoring.thuc_hanh.refactoring_doi_ten_va_tach_hang.Caculator;
 
@@ -6,16 +6,16 @@ public class Candidate {
     private int registrationNumber;
     private String name;
     private String dateOfBirth;
-    private byte mathMark;
-    private byte mathLiterature;
-    private byte mathEnglish;
+    private double mathMark;
+    private double mathLiterature;
+    private double mathEnglish;
 
     public Candidate(int registrationNumber,
                      String name,
                      String dateOfBirth,
-                     byte mathMark,
-                     byte mathLiterature,
-                     byte mathEnglish) {
+                     double mathMark,
+                     double mathLiterature,
+                     double mathEnglish) {
         this.registrationNumber = registrationNumber;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
@@ -37,15 +37,15 @@ public class Candidate {
         return dateOfBirth;
     }
 
-    public byte getMathMark() {
+    public double getMathMark() {
         return mathMark;
     }
 
-    public byte getMathLiterature() {
+    public double getMathLiterature() {
         return mathLiterature;
     }
 
-    public byte getMathEnglish() {
+    public double getMathEnglish() {
         return mathEnglish;
     }
 
@@ -72,5 +72,21 @@ public class Candidate {
 
     public void setMathEnglish(byte mathEnglish) {
         this.mathEnglish = mathEnglish;
+    }
+
+    public double getTotalMark(){
+        return this.mathMark + this.mathEnglish + this.mathEnglish;
+    }
+
+    @Override
+    public String toString() {
+        return "Candidate{" +
+                "registrationNumber=" + registrationNumber +
+                ", name='" + name + '\'' +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
+                ", mathMark=" + mathMark +
+                ", mathLiterature=" + mathLiterature +
+                ", mathEnglish=" + mathEnglish +
+                '}';
     }
 }
