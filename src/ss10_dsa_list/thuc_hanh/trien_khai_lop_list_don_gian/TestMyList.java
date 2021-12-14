@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class TestMyList {
     public static void main(String[] args) {
-    MyList<Integer> listInteger  = new MyList<Integer>();
+    MyList<Integer> listInteger  = new MyList<>();
     listInteger.add(4);
     listInteger.add(5);
     listInteger.add(6);

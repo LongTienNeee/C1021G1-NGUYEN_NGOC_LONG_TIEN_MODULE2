@@ -1,9 +1,9 @@
-package ss10_dsa_list.thuc_hanh.trien_khai_array_list_theo_thu_vien;
+package ss10_dsa_list.bai_tap.trien_khai_array_list_theo_thu_vien;
 
 import java.util.Arrays;
 
 public class MyListA<E> {
-    private int size;
+    private int size = 0;
     private static final int DEFAULT_CAPACITY = 10;
     public Object[] elements;
 
@@ -60,6 +60,44 @@ public class MyListA<E> {
             elements[index] = element;
             size++;
         }
+    }
+
+    //Method lấy index
+    public int indexOf(E element){
+        int index = -1;
+        for(int i = 0 ; i < size ; i++){
+            if(this.elements[i].equals(element)){
+                return i;
+            }
+        }
+        return index;
+    }
+
+
+    // method contains kiểm tra 1 phần tử có nằm trong mảng MyarrayList Hay không?
+    public boolean contains(E element){
+        return this.indexOf(element) >= 0 ;
+    }
+
+    //method sao chép hay còn gọi là tạo ra bảng sao từ arrayList
+    public MyListA<E> clone(){
+        MyListA<E> v = new MyListA<>();
+        v.elements= Arrays.copyOf(this.elements, this.size);
+        v.size = this.size;
+        return v;
+    }
+
+    public E remove(int index){
+        if(index < 0 || index > elements.length){
+            throw  new IllegalArgumentException("Error index " + index);
+        }
+        E element = (E) elements[index];
+        for(int i = index ; i < size -1 ; i++){
+            elements[i] = elements[i + 1];
+        }
+        elements[size - 1] = null;
+        size--;
+        return element;
     }
 
     private void ensureCapacity(int minCapacity){
