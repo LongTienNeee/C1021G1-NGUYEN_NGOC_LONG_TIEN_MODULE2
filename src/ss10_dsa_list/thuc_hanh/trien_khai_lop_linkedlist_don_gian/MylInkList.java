@@ -20,5 +20,11 @@ public class MylInkList {
             return this.data;
         }
     }
+
+    public void add(int index , Object data){
+        Node temp = head ;
+        Node holder;
+
+    }
 }
 
