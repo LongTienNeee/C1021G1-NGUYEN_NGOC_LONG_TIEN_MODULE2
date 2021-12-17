@@ -35,6 +35,7 @@ public class ProductService implements IProduct {
                     product.setCost(price);
                 System.out.println("Sản phẩm đã được sửa lại :");
                 System.out.println(product);
+                break;
             } else {
                 System.out.println("Mã sản phẩm không tồn tại đễ xóa");
             }
@@ -48,6 +49,7 @@ public class ProductService implements IProduct {
             if(product.getId() == checkId){
                 products.remove(product);
                 System.out.println("Sản phẩm đã được xóa");
+                break;
             } else {
                 System.out.println("Sản phẩm không tồn tại để xóa");
             }

@@ -1,21 +1,18 @@
 package package_nay_dung_de_test_thoi;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class ArrList {
     public static void main(String[] args) {
-
-        ArrayList<String> animals = new ArrayList<>();
-        animals.add("fish");
-        animals.add("dog");
-        animals.add("cat");
-        animals.toArray();
-
-
-        Object[] array = animals.toArray();
-        System.out.println(Arrays.toString(array));
+        List<Integer> list = new LinkedList<>();
+        list.add(2);
+        list.add(10);
+        list.add(1);
+        list.add(15);
+        list.add(9);
+        System.out.println(list);
     }
 }
