@@ -5,13 +5,13 @@ import java.util.Arrays;
 
 public class BubbleSort {
 
-    public static void bubbleSort(int[] arr) {
+    public static void bubbleSort(double[] arr) {
         boolean next = true;
-        for(int i = 1 ; i < arr.length   && next ; i++){
+        for(int i = 1 ; i < arr.length && next ; i++){
             next = false;
             for(int j = 0 ; j < arr.length - i ; j++){
                 if(arr[j] > arr[j+1]){
-                    int temp = arr[j];
+                    double temp = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;
 
@@ -22,7 +22,7 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {5,7,1,3,2,9,8,4,6};
+        double[] arr = {5.2,7.2,1.2,3.2,2.2,9.2,8.2,4.2,6.2};
         System.out.println("After :");
         System.out.println(Arrays.toString(arr));
         bubbleSort(arr);

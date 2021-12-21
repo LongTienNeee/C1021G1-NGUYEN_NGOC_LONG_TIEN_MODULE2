@@ -1,4 +1,6 @@
-package case_study.bai_1;
+package case_study.bai_1.model;
+
+import case_study.bai_1.model.Furama;
 
 public class House extends Furama {
     private byte roomStandardHouse;

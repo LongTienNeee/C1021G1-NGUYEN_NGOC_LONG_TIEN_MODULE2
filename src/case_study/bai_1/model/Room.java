@@ -1,6 +1,8 @@
-package case_study.bai_1;
+package case_study.bai_1.model;
 
-public class Room extends Furama{
+import case_study.bai_1.model.Furama;
+
+public class Room extends Furama {
     private String freeServiceInclude;
 
     public Room(String nameOfService,

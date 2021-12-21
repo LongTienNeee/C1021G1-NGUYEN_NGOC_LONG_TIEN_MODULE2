@@ -1,4 +1,4 @@
-package case_study.bai_1;
+package case_study.bai_1.model;
 
 public class Furama {
     private String nameOfService ;
