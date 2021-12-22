@@ -24,7 +24,7 @@ public class Calculator {
             System.out.println("Hiệu a - b = " + sub);
             System.out.println("Tích a * b = " + mul);
             System.out.println("Thương a / b = " + div);
-        } catch (Exception e){
+        } catch (ArithmeticException e){
             System.out.println("Xảy ra ngoại lệ " + e.getMessage());
         }
     }
