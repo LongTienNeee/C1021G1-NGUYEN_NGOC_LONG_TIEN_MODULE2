@@ -3,7 +3,7 @@ package ss16_io_text_file.thuc_hanh.tinh_tong_cac_so_trong_file_text;
 import java.io.*;
 
 public class ReadFileNumber {
-    public void readFileText(String filePath) {
+    public void readFileText(String filePath)    {
         try {
             File file = new File(filePath);
 
