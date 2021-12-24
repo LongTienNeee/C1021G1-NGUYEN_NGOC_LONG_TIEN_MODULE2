@@ -15,7 +15,8 @@ public class Main {
 
         try{
             String line;
-            br = new BufferedReader(new FileReader(FILE_NAME));
+            FileReader fileReader = new FileReader(FILE_NAME);
+            br = new BufferedReader(fileReader);
 
             while ((line = br.readLine()) != null) {
                 printCountry(parseCsvLine(line));

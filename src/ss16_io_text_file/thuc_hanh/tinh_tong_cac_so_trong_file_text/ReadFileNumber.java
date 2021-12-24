@@ -14,13 +14,13 @@ public class ReadFileNumber {
             FileReader fileReader = new FileReader(file);
             BufferedReader br = new BufferedReader(fileReader);
             String line = "";
-            int sum = 0;
+//            int sum = 0;
             while ((line = br.readLine()) != null){
                 System.out.println(line);
-                sum += Integer.parseInt(line);
+//                sum += Integer.parseInt(line);
             }
             br.close();
-            System.out.println("Tổng = " + sum );
+//            System.out.println("Tổng = " + sum );
         } catch (Exception e){
             System.err.println("File không tồn tại");
         }
